@@ -1,0 +1,332 @@
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	"01 configura\303\247\303\243o.txt"
+	"02 iniciando reposit\303\263rio.txt"
+	read.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+myke@myke-Laptop ~/Dropbox/git_course $  git add read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   read.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	"01 configura\303\247\303\243o.txt"
+	"02 iniciando reposit\303\263rio.txt"
+
+myke@myke-Laptop ~/Dropbox/git_course $ vi read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   read.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   read.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	"01 configura\303\247\303\243o.txt"
+	"02 iniciando reposit\303\263rio.txt"
+
+myke@myke-Laptop ~/Dropbox/git_course $ git add read.md 
+myke@myke-Laptop ~/Dropbox/git_course $ git commit -m "Add read.md"
+[master (root-commit) 88c8919] Add read.md
+ 1 file changed, 5 insertions(+)
+ create mode 100644 read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	"01 configura\303\247\303\243o.txt"
+	"02 iniciando reposit\303\263rio.txt"
+
+nothing added to commit but untracked files present (use "git add" to track)
+myke@myke-Laptop ~/Dropbox/git_course $ git add *
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   "01 configura\303\247\303\243o.txt"
+	new file:   "02 iniciando reposit\303\263rio.txt"
+
+myke@myke-Laptop ~/Dropbox/git_course $ git reset HEAD 01\ configuração.txt
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   "02 iniciando reposit\303\263rio.txt"
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	"01 configura\303\247\303\243o.txt"
+
+myke@myke-Laptop ~/Dropbox/git_course $ git add 01\ configuração.txt 
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   "01 configura\303\247\303\243o.txt"
+	new file:   "02 iniciando reposit\303\263rio.txt"
+
+myke@myke-Laptop ~/Dropbox/git_course $ git commit
+[master 99992da] Add 01 and 02 files.
+ 2 files changed, 59 insertions(+)
+ create mode 100644 "01 configura\303\247\303\243o.txt"
+ create mode 100644 "02 iniciando reposit\303\263rio.txt"
+myke@myke-Laptop ~/Dropbox/git_course $ git commiy
+git: 'commiy' is not a git command. See 'git --help'.
+
+Did you mean this?
+	commit
+myke@myke-Laptop ~/Dropbox/git_course $ git commit
+On branch master
+nothing to commit, working directory clean
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+nothing to commit, working directory clean
+myke@myke-Laptop ~/Dropbox/git_course $ git log
+commit 99992daa99f38d02eb3e4c842bef9a390b7cfcee
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:43:26 2019 -0300
+
+    Add 01 and 02 files.
+
+commit 88c8919ae5c6b132ee642dd52853fcaa72092dbe
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:41:10 2019 -0300
+
+    Add read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git log --decorate
+commit 99992daa99f38d02eb3e4c842bef9a390b7cfcee (HEAD -> master)
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:43:26 2019 -0300
+
+    Add 01 and 02 files.
+
+commit 88c8919ae5c6b132ee642dd52853fcaa72092dbe
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:41:10 2019 -0300
+
+    Add read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git log --author "Myke"
+commit 99992daa99f38d02eb3e4c842bef9a390b7cfcee
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:43:26 2019 -0300
+
+    Add 01 and 02 files.
+
+commit 88c8919ae5c6b132ee642dd52853fcaa72092dbe
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:41:10 2019 -0300
+
+    Add read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git log --author "Wil"
+myke@myke-Laptop ~/Dropbox/git_course $ git log --shortlog
+fatal: unrecognized argument: --shortlog
+myke@myke-Laptop ~/Dropbox/git_course $ git shortlog
+Myke Albuquerque Pinto de Oliveira (2):
+      Add read.md
+      Add 01 and 02 files.
+
+myke@myke-Laptop ~/Dropbox/git_course $ git shortlog -sn
+     2  Myke Albuquerque Pinto de Oliveira
+myke@myke-Laptop ~/Dropbox/git_course $ git log --graph
+* commit 99992daa99f38d02eb3e4c842bef9a390b7cfcee
+| Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+| Date:   Thu May 16 21:43:26 2019 -0300
+| 
+|     Add 01 and 02 files.
+|  
+* commit 88c8919ae5c6b132ee642dd52853fcaa72092dbe
+  Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+  Date:   Thu May 16 21:41:10 2019 -0300
+  
+      Add read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git show 88c8919ae5c6b132ee642dd52853fcaa72092dbe
+commit 88c8919ae5c6b132ee642dd52853fcaa72092dbe
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:41:10 2019 -0300
+
+    Add read.md
+
+diff --git a/read.md b/read.md
+new file mode 100644
+index 0000000..78c90d6
+--- /dev/null
++++ b/read.md
+@@ -0,0 +1,5 @@
++# Github
++
++Arquivo da aula de git e github.
++
++Este é um repositório teste para ensinar como o git funciona.Ab
+myke@myke-Laptop ~/Dropbox/git_course $ git show 99992daa99f38d02eb3e4c842bef9a390b7cfcee
+commit 99992daa99f38d02eb3e4c842bef9a390b7cfcee
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:43:26 2019 -0300
+
+    Add 01 and 02 files.
+
+diff --git "a/01 configura\303\247\303\243o.txt" "b/01 configura\303\247\303\243o.txt"
+new file mode 100644
+index 0000000..c03df1d
+--- /dev/null
++++ "b/01 configura\303\247\303\243o.txt"       
+@@ -0,0 +1,46 @@
++myke@myke-Laptop ~ $ sudo apt install git
++[sudo] password for myke: 
++Reading package lists... Done
++Building dependency tree       
++Reading state information... Done
++git is already the newest version (1:2.7.4-0ubuntu1.6).
++0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
++myke@myke-Laptop ~ $ git config --global user.name "Myke Albuquerque Pinto de Oliveira"
++myke@myke-Laptop ~ $ git config --global user.email "mykeapo@gmail.com"
++myke@myke-Laptop ~ $ sublime
++sublime: command not found
++myke@myke-Laptop ~ $ sub
++No command 'sub' found, did you mean:
++ Command 'sum' from package 'coreutils' (main)
++ Command 'su' from package 'login' (main)
++ Command 'dub' from package 'dub' (universe)
++ Command 'sur' from package 'subtle' (universe)
++ Command 'subs' from package 'libsubtitles-perl' (universe)
++ Command 'qsub' from package 'torque-client-x11' (universe)
++ Command 'qsub' from package 'torque-client' (universe)
++ Command 'qsub' from package 'gridengine-client' (universe)
++ Command 'qsub' from package 'slurm-wlm-torque' (universe)
++ Command 'sb' from package 'lrzsz' (universe)
++ Command 'sup' from package 'sup' (universe)
++ Command 'sdb' from package 'sdb' (universe)
++sub: command not found
++myke@myke-Laptop ~ $ s
++s: command not found
++myke@myke-Laptop ~ $ emacs
++myke@myke-Laptop ~ $ git --config core.editor emacs
++Unknown option: --config
++usage: git [--version] [--help] [-C <path>] [-c name=value]
++           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
++           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
++           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
++           <command> [<args>]
++myke@myke-Laptop ~ $ git config --global core.editor emacs
++myke@myke-Laptop ~ $ git config user.name
++Myke Albuquerque Pinto de Oliveira
++myke@myke-Laptop ~ $ git config user.email
++mykeapo@gmail.com
++myke@myke-Laptop ~ $ git config --list
++user.name=Myke Albuquerque Pinto de Oliveira
++user.email=mykeapo@gmail.com
++core.editor=emacs
++myke@myke-Laptop ~ $ 
+diff --git "a/02 iniciando reposit\303\263rio.txt" "b/02 iniciando reposit\303\263rio.txt"
+new file mode 100644
+index 0000000..a48448f
+--- /dev/null
++++ "b/02 iniciando reposit\303\263rio.txt"     
+@@ -0,0 +1,13 @@
++myke@myke-Laptop ~/Dropbox/git_course $ git init
++Initialized empty Git repository in /home/myke/Dropbox/git_course/.git/
++myke@myke-Laptop ~/Dropbox/git_course $ ls -la
++total 28
++drwxrwxr-x  3 myke myke 4096 May 16 21:22 .
++drwx------ 35 myke myke 4096 May 16 21:20 ..
++-rw-rw-r--  1 myke myke 2008 May 16 21:20 01 configuração.txt
++drwxrwxr-x  7 myke myke 4096 May 16 21:22 .git
++myke@myke-Laptop ~/Dropbox/git_course $ cd .git
++myke@myke-Laptop ~/Dropbox/git_course/.git $ ls
++branches  config  description  HEAD  hooks  info  objects  refs
++myke@myke-Laptop ~/Dropbox/git_course/.git $ cd ..
++myke@myke-Laptop ~/Dropbox/git_course $ 
+myke@myke-Laptop ~/Dropbox/git_course $ emacs read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git diff
+diff --git a/read.md b/read.md
+index 78c90d6..5ba9609 100644
+--- a/read.md
++++ b/read.md
+@@ -3,3 +3,5 @@
+ Arquivo da aula de git e github.
+ 
+ Este é um repositório teste para ensinar como o git funciona.Ab
++
++Gostou do curso, quer mais, ajude com uma doação, até um café é válido.
+\ No newline at end of file
+myke@myke-Laptop ~/Dropbox/git_course $ git diff  --name-only
+read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   read.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+myke@myke-Laptop ~/Dropbox/git_course $ git commit -am "Edit read.md"
+[master bf27142] Edit read.md
+ 1 file changed, 2 insertions(+)
+myke@myke-Laptop ~/Dropbox/git_course $ git log
+commit bf2714260379cbbf614fb90012cf4a20b5fee153
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:53:25 2019 -0300
+
+    Edit read.md
+
+commit 99992daa99f38d02eb3e4c842bef9a390b7cfcee
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:43:26 2019 -0300
+
+    Add 01 and 02 files.
+
+commit 88c8919ae5c6b132ee642dd52853fcaa72092dbe
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:41:10 2019 -0300
+
+    Add read.md
+myke@myke-Laptop ~/Dropbox/git_course $ git show
+commit bf2714260379cbbf614fb90012cf4a20b5fee153
+Author: Myke Albuquerque Pinto de Oliveira <mykeapo@gmail.com>
+Date:   Thu May 16 21:53:25 2019 -0300
+
+    Edit read.md
+
+diff --git a/read.md b/read.md
+index 78c90d6..5ba9609 100644
+--- a/read.md
++++ b/read.md
+@@ -3,3 +3,5 @@
+ Arquivo da aula de git e github.
+ 
+ Este é um repositório teste para ensinar como o git funciona.Ab
++
++Gostou do curso, quer mais, ajude com uma doação, até um café é válido.
+\ No newline at end of file
+myke@myke-Laptop ~/Dropbox/git_course $ 
