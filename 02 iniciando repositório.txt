@@ -1,0 +1,13 @@
+myke@myke-Laptop ~/Dropbox/git_course $ git init
+Initialized empty Git repository in /home/myke/Dropbox/git_course/.git/
+myke@myke-Laptop ~/Dropbox/git_course $ ls -la
+total 28
+drwxrwxr-x  3 myke myke 4096 May 16 21:22 .
+drwx------ 35 myke myke 4096 May 16 21:20 ..
+-rw-rw-r--  1 myke myke 2008 May 16 21:20 01 configuração.txt
+drwxrwxr-x  7 myke myke 4096 May 16 21:22 .git
+myke@myke-Laptop ~/Dropbox/git_course $ cd .git
+myke@myke-Laptop ~/Dropbox/git_course/.git $ ls
+branches  config  description  HEAD  hooks  info  objects  refs
+myke@myke-Laptop ~/Dropbox/git_course/.git $ cd ..
+myke@myke-Laptop ~/Dropbox/git_course $ 

@@ -1,0 +1,46 @@
+myke@myke-Laptop ~ $ sudo apt install git
+[sudo] password for myke: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+git is already the newest version (1:2.7.4-0ubuntu1.6).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+myke@myke-Laptop ~ $ git config --global user.name "Myke Albuquerque Pinto de Oliveira"
+myke@myke-Laptop ~ $ git config --global user.email "mykeapo@gmail.com"
+myke@myke-Laptop ~ $ sublime
+sublime: command not found
+myke@myke-Laptop ~ $ sub
+No command 'sub' found, did you mean:
+ Command 'sum' from package 'coreutils' (main)
+ Command 'su' from package 'login' (main)
+ Command 'dub' from package 'dub' (universe)
+ Command 'sur' from package 'subtle' (universe)
+ Command 'subs' from package 'libsubtitles-perl' (universe)
+ Command 'qsub' from package 'torque-client-x11' (universe)
+ Command 'qsub' from package 'torque-client' (universe)
+ Command 'qsub' from package 'gridengine-client' (universe)
+ Command 'qsub' from package 'slurm-wlm-torque' (universe)
+ Command 'sb' from package 'lrzsz' (universe)
+ Command 'sup' from package 'sup' (universe)
+ Command 'sdb' from package 'sdb' (universe)
+sub: command not found
+myke@myke-Laptop ~ $ s
+s: command not found
+myke@myke-Laptop ~ $ emacs
+myke@myke-Laptop ~ $ git --config core.editor emacs
+Unknown option: --config
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+myke@myke-Laptop ~ $ git config --global core.editor emacs
+myke@myke-Laptop ~ $ git config user.name
+Myke Albuquerque Pinto de Oliveira
+myke@myke-Laptop ~ $ git config user.email
+mykeapo@gmail.com
+myke@myke-Laptop ~ $ git config --list
+user.name=Myke Albuquerque Pinto de Oliveira
+user.email=mykeapo@gmail.com
+core.editor=emacs
+myke@myke-Laptop ~ $ 
