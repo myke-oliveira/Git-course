@@ -1,0 +1,24 @@
+myke@myke-Laptop ~/Dropbox/git_course $ git remote add origin git@github.com:myke-oliveira/Git-course.git
+myke@myke-Laptop ~/Dropbox/git_course $ git push -u origin master
+Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+myke@myke-Laptop ~/Dropbox/git_course $ git remote add origin https://github.com/myke-oliveira/Git-course.git
+fatal: remote origin already exists.
+myke@myke-Laptop ~/Dropbox/git_course $ git remote remove origin
+myke@myke-Laptop ~/Dropbox/git_course $ git remote add origin https://github.com/myke-oliveira/Git-course.git
+myke@myke-Laptop ~/Dropbox/git_course $ git push -u origin master
+Username for 'https://github.com': myke-oliveira
+Password for 'https://myke-oliveira@github.com': 
+Counting objects: 13, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (13/13), 3.98 KiB | 0 bytes/s, done.
+Total 13 (delta 5), reused 0 (delta 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/myke-oliveira/Git-course.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+myke@myke-Laptop ~/Dropbox/git_course $ 
